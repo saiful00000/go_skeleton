@@ -1,0 +1,52 @@
+# Binaries for programs and plugins
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Output files
+*.log
+*.out
+
+# Test binary, coverage reports
+*.test
+*.coverprofile
+*.cov
+
+# Editor and IDE configuration
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Dependency directories
+vendor/
+
+# Go workspace files
+*.mod
+*.sum
+go.work
+go.work.sum
+
+# Temporary files and caches
+*.tmp
+*.temp
+*.bak
+*.old
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Linux
+*.swp
+
+# Go build cache
+**/bin/
+**/pkg/
+
+# Coverage reports
+coverage.out
