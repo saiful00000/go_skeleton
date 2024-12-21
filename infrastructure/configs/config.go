@@ -22,7 +22,7 @@ func InitConfig() *Config {
 	viper.SetConfigType("env")
 	viper.AutomaticEnv()
 
-	if err := viper.ReadConfig(); err != nil {
+	if err := viper.ReadInConfig(); err != nil {
 		log.Fatal("Error while reading app.env file", err)
 	}
 
