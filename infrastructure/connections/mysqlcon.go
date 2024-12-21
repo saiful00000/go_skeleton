@@ -14,7 +14,7 @@ var db *gorm.DB
 func connect() {
 	config := configs.LocalConfig
 
-	dsn := fmt.Sprint("%s:%s@%s/%s?charset=utf8mb4&parseTime=True&loc=Local", config.DbUser, config.DbPass, config.DbIp, config.DbName)
+	dsn := fmt.Sprintf("%s:%s@%s/%s?charset=utf8mb4&parseTime=True&loc=Local", config.DbUser, config.DbPass, config.DbIp, config.DbName)
 
 	d, err := gorm.Open(mysql.Open(dsn), &gorm.Config{
 		Logger: logger.Default.LogMode(logger.Info),
