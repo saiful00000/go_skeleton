@@ -50,3 +50,6 @@ Desktop.ini
 
 # Coverage reports
 coverage.out
+
+# Environment variables
+.env
