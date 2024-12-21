@@ -22,19 +22,19 @@ func InitConfig() *Config {
 	viper.SetConfigType("env")
 	viper.AutomaticEnv()
 
-    if err := viper.ReadConfig(); err != nil {
-        log.Fatal("Error while reading app.env file", err)
-    }
+	if err := viper.ReadConfig(); err != nil {
+		log.Fatal("Error while reading app.env file", err)
+	}
 
-    var config *Config
+	var config *Config
 
-    if err := viper.Unmarshal(&config); err != nil {
-        log.Fatal("Error reading app.env file", err)
-    }
+	if err := viper.Unmarshal(&config); err != nil {
+		log.Fatal("Error reading app.env file", err)
+	}
 
-    return config
+	return config
 }
 
 func SetConfig() {
-    LocalConfig = InitConfig()
+	LocalConfig = InitConfig()
 }
