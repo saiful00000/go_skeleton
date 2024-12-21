@@ -2,6 +2,7 @@ package connections
 
 import (
 	"fmt"
+	"go_clean/core/models"
 	"go_clean/infrastructure/configs"
 
 	"gorm.io/driver/mysql"
@@ -32,7 +33,7 @@ func connect() {
 }
 
 func migrate() {
-	// Should be implemented when a table model created
+	db.Migrator().AutoMigrate(&models.Useer{})
 }
 
 func GetDB() *gorm.DB{
